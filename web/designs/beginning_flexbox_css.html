@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Flexbox Example</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 1rem;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 1rem;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+            main {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1rem;
+            }
+            main section,
+            main article {
+                flex: 1;
+                margin: 0.5rem;
+            }
+            aside {
+                order: -1; /* Ensure aside comes first on small screens */
+                flex: 0 0 100%;
+                padding: 1rem;
+                background-color: #f4f4f4;
+                margin-bottom: 1rem;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 1rem;
+                flex: 0 0 100%;
+            }
+            @media (min-width: 768px) {
+                aside {
+                    order: 0;
+                    flex: 0 0 25%;
+                    margin-left: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <h2>Welcome</h2>
+                <p>This is the home page.</p>
+            </section>
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Information about our company.</p>
+            </section>
+            <article>
+                <h3>Latest News</h3>
+                <p>Some recent news article.</p>
+            </article>
+        </main>
+        <aside>
+            <h4>Related Links</h4>
+            <p>Links to related content.</p>
+        </aside>
+        <footer>
+            <p>&copy; 2024 My Website</p>
+        </footer>
+    </body>
+</html>

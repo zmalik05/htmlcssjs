@@ -1,0 +1,121 @@
+version: 5
+environments:
+  default:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge/
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/deno-1.43.6-h1d6eb56_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-13.2.0-h77fa898_7.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libgomp-13.2.0-h77fa898_7.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/deno-1.43.6-hfe9b8fa_0.conda
+      osx-arm64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/deno-1.43.6-hce30654_0.conda
+packages:
+- kind: conda
+  name: _libgcc_mutex
+  version: '0.1'
+  build: conda_forge
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
+  sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
+  md5: d7c89558ba9fa0495403155b64376d81
+  license: None
+  size: 2562
+  timestamp: 1578324546067
+- kind: conda
+  name: _openmp_mutex
+  version: '4.5'
+  build: 2_gnu
+  build_number: 16
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
+  sha256: fbe2c5e56a653bebb982eda4876a9178aedfc2b545f25d0ce9c4c0b508253d22
+  md5: 73aaf86a425cc6e73fcf236a5a46396d
+  depends:
+  - _libgcc_mutex 0.1 conda_forge
+  - libgomp >=7.5.0
+  constrains:
+  - openmp_impl 9999
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23621
+  timestamp: 1650670423406
+- kind: conda
+  name: deno
+  version: 1.43.6
+  build: h1d6eb56_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/deno-1.43.6-h1d6eb56_0.conda
+  sha256: f5b1d5ada69d09cdbb3bb5b20d8be3e3dee41e5d190d24cf64c107384918040f
+  md5: 927ac84c2d4f7f534bc1dd0fc160072c
+  depends:
+  - libgcc-ng >=12
+  license: MIT
+  license_family: MIT
+  size: 41544618
+  timestamp: 1716455269728
+- kind: conda
+  name: deno
+  version: 1.43.6
+  build: hce30654_0
+  subdir: osx-arm64
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/deno-1.43.6-hce30654_0.conda
+  sha256: 9654f14fe5f9020804bf8ec2e538beb6241c4a22cc2f5f04525a5b8035c96f84
+  md5: 4de40f1b3661ebeaf46c6190044348a0
+  license: MIT
+  license_family: MIT
+  size: 32421163
+  timestamp: 1716453367911
+- kind: conda
+  name: deno
+  version: 1.43.6
+  build: hfe9b8fa_0
+  subdir: osx-64
+  url: https://conda.anaconda.org/conda-forge/osx-64/deno-1.43.6-hfe9b8fa_0.conda
+  sha256: c5401a3f2e8765e2758de526bdeca6722900f11b6eb2b21b75a92e74697bfeb3
+  md5: 8d81d02bd79070a2ae1a63c7f9466a11
+  depends:
+  - __osx >=10.13
+  constrains:
+  - __osx >=10.12
+  license: MIT
+  license_family: MIT
+  size: 34724759
+  timestamp: 1716455941934
+- kind: conda
+  name: libgcc-ng
+  version: 13.2.0
+  build: h77fa898_7
+  build_number: 7
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-13.2.0-h77fa898_7.conda
+  sha256: 62af2b89acbe74a21606c8410c276e57309c0a2ab8a9e8639e3c8131c0b60c92
+  md5: 72ec1b1b04c4d15d4204ece1ecea5978
+  depends:
+  - _libgcc_mutex 0.1 conda_forge
+  - _openmp_mutex >=4.5
+  constrains:
+  - libgomp 13.2.0 h77fa898_7
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 775806
+  timestamp: 1715016057793
+- kind: conda
+  name: libgomp
+  version: 13.2.0
+  build: h77fa898_7
+  build_number: 7
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgomp-13.2.0-h77fa898_7.conda
+  sha256: 781444fa069d3b50e8ed667b750571cacda785761c7fc2a89ece1ac49693d4ad
+  md5: abf3fec87c2563697defa759dec3d639
+  depends:
+  - _libgcc_mutex 0.1 conda_forge
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 422336
+  timestamp: 1715015995979

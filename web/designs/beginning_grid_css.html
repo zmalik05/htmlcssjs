@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Grid Example</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 1rem;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 1rem;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+            main {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                grid-gap: 1rem;
+            }
+            main section,
+            main article,
+            aside {
+                padding: 1rem;
+                background-color: lightblue;
+                border: 1px solid #ccc;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 1rem;
+            }
+            @media (min-width: 768px) {
+                main {
+                    grid-template-columns: 3fr 1fr;
+                }
+                aside {
+                    order: -1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <h2>Welcome</h2>
+                <p>This is the home page.</p>
+            </section>
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Information about our company.</p>
+            </section>
+            <article>
+                <h3>Latest News</h3>
+                <p>Some recent news article.</p>
+            </article>
+            <aside>
+                <h4>Related Links</h4>
+                <p>Links to related content.</p>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Website</p>
+        </footer>
+    </body>
+</html>
