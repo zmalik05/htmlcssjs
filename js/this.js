@@ -7,12 +7,27 @@ named()
 
 console.log('------------------')
 
-let unnamed = () => {
+function named2(){
+    var a = 3
+    let b = 4;
+    function named_inside(){
+        console.log(">>",this);
+
+    }
+    console.log(">", this);
+    console.log("Now calling named_inside");
+    named_inside();
+}
+named2();
+
+console.log("---------------");
+
+let unnamed_arrow = () => {
     var a = 3;
     let b = 4;
     console.log(this);
 }
-unnamed()
+unnamed_arrow()
 
 console.log('------------------')
 
